@@ -1,0 +1,25 @@
+# Placeholder docker-compose.yml
+# This will be configured to run the different services (backend, frontend, database).
+
+version: '3.8'
+services:
+  backend:
+    build: .
+    ports:
+      - "5000:5000" # Example port, adjust as needed
+    volumes:
+      - ./backend:/app/backend
+  # frontend:
+  #   build: ./frontend # Assuming frontend has its own Dockerfile or build process
+  #   ports:
+  #     - "3000:3000" # Example port, adjust as needed
+  #   depends_on:
+  #     - backend
+  # db:
+  #   image: postgres:13 # Example database, adjust as needed
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     - POSTGRES_USER=user
+  #     - POSTGRES_PASSWORD=pass
+  #     - POSTGRES_DB=mydb
